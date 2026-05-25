@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Comic Sans MS, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #ff80aa;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: purple;
+}
+
+nav {
+  float: left;
+  width: 30%;
+  height: 500px;
+  background: #b3daff;
+  padding: 30px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #ffffcc;
+  height: 500px; 
+}
+
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+  background-color: #bb99ff;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultorio Lily</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+            <img src="consultoriolily.png" alt="Logo del Consultorio Medico" width="250" height="300"style=" display: flex; position: absolute; top: -10px; left: 30px;">
+            <h1>Consultorio Medico Lily</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" style="color: purple;">Inicio</a></li>
+            <li><a href="#" style="color: purple;">Consultas</a></li>
+            <li><a href="#" style="color: purple;">Doctores</a></li>
+        </ul>
+    </nav>
+
+    <article>
+            <h2 style = "font-size: 35px; color: pink;">Pacientes</h2>
+            <!--aki--!>
+           
+            <img src="corazon.png" alt="imagen del consultorio" class="featured-img" widht="300" height="300">
+      </article>
+
+    <footer>
+        <p><strong>Diseñado por:</strong> Andrea Franco Enríquez</p>
+        <p>No. Control: 24308051280541 | Semestre: 4to | Grupo: I</p>
+        <p>Especialidad: Programación</p>
+    </footer>
+
+</body>
+</html>

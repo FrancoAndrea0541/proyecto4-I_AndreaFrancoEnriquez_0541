@@ -1,90 +1,292 @@
 <!DOCTYPE html>
 <html lang="es">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Comic Sans MS, Helvetica, sans-serif;
-}
-
-header {
-  background-color: #ff80aa;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: purple;
-}
-
-nav {
-  float: left;
-  width: 30%;
-  height: 500px;
-  background: #b3daff;
-  padding: 30px;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #ffffcc;
-  height: 500px; 
-}
-
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-footer {
-  background-color: #bb99ff;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
-</head>
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultorio Lily</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #ff80aa;
+            padding: 30px;
+            text-align: center;
+            color: purple;
+            position: relative;
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 120px; 
+            height: auto;
+        }
+
+        nav {
+            background-color: #b3daff;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;        
+            justify-content: center;
+            gap: 20px;             
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: purple;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        article {
+            padding: 20px;
+            background-color: #ffffcc;
+            min-height: 100vh; 
+        }
+        table {
+            width: 100%; 
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #bb99ff;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-            <img src="consultoriolily.png" alt="Logo del Consultorio Medico" width="250" height="300"style=" display: flex; position: absolute; top: -10px; left: 30px;">
-            <h1>Consultorio Medico Lily</h1>
+        <img src="consultoriolily.png" alt="logo del consultorio uwu">
+        <h1>Consultorio Medico Lily</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#" style="color: purple;">Inicio</a></li>
-            <li><a href="#" style="color: purple;">Consultas</a></li>
-            <li><a href="#" style="color: purple;">Doctores</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Consultas.html">Consultas</a></li>
+            <li><a href="Doctores.html">Doctores</a></li>
         </ul>
     </nav>
 
     <article>
-            <h2 style = "font-size: 35px; color: pink;">Pacientes</h2>
-            <!--aki--!>
-           
-            <img src="corazon.png" alt="imagen del consultorio" class="featured-img" widht="300" height="300">
+        <h2 style="font-size: 35px; color: pink;">Pacientes</h2>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>CURP</th>
+                <th>Edad</th>
+                <th>Sexo</th>
+                <th>Tipo de Sangre</th>
+		<th>Fecha de Nacimiento</th>
+		<th>Contacto Paciente</th>
+		<th>Contacto Emergencia</th>
+		<th>Nombre Contacto Emergencia</th>
+		<th>Enfermedades Cronicas</th>
+		<th>Alergias</th>
+		<th>RFC</th>
+		<th>Direccion</th>
+		<th>Nombre de Aseguranza</th>
+		<th>Numero de Aseguranza</th>
+		<th>Antecedentes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Roberto<br>Villalobos Peña<br>Paciente 1</td>
+                <td>VIPR431230HMLNB07</td>
+                <td>82</td>
+                <td>H</td>
+                <td>B+</td>
+		<td>30/12/1943</td>
+		<td>656 1234 5678</td>
+		<td>656 987 6543</td>
+		<td>Sofia<br>Castro Mendez</td>
+		<td>hipertension</td>
+		<td>penicilina</td>
+		<td>PEGJ850520AB1</td>
+		<td>calle.piña</td>
+		<td>seguros horizonte vital</td>
+		<td>55-1234-5678</td>
+		<td>infarto agudo al miocardio</td>
+            </tr>
+            <tr>
+		<td>Juan Carlos<br>Perez Lopez<br>Paciente 2</td>
+                <td>PELJ570512HDFRRN01</td>
+		<td>68</td>
+		<td>H</td>
+		<td>O+</td>
+		<td>12/05/1957</td>
+		<td>656 2345 689</td>
+		<td>656 222 777</td>
+		<td>Beatriz<br>Enriquez Luna</td>
+		<td>diabetes mellitus tipo 3</td>
+		<td>polen</td>
+		<td>LOSM921012H82</td>
+		<td>calle.salmon</td>
+		<td>proteccion global 360</td>
+		<td>81-9870-5432</td>
+		<td>Diabetes mellitus tipo 2 y obesidad</td>
+            </tr>
+	    <tr>
+                <td>Gabriela<br>Montes Oca<br>Paciente 3</td>
+                <td>MEOG700610MGRNNN0</td>
+                <td>55</td>
+                <td>M</td>
+                <td>O-</td>
+		<td>10/06/1970</td>
+		<td>656 3456 7890</td>
+		<td>656 756 4321</td>
+		<td>Daniel<br>Zuñiga Orozco</td>
+		<td>hipotiroidismo</td>
+		<td>nueces</td>
+		<td>TORR780130MN5</td>
+		<td>calle.chocolate</td>
+		<td>aseguradora el roble seguro</td>
+		<td>81-4567-8901</td>
+		<td>Cancer de mama</td>
+            </tr>
+            <tr>
+                <td>Diego Armando<br>Sosa Diaz<br>Paciente 4</td>
+                <td>SODD890914HSPNSN08</td>
+                <td>36</td>
+		<td>H</td>
+		<td>O+</td>
+		<td>14/01/1989</td>
+		<td>656 442 456</td>
+		<td>656 654 3210</td>
+		<td>Monica<br>Islas Ramos</td>
+		<td>colitis ulcerosa</td>
+		<td>mariscos</td>
+		<td>GOVA881204KL2</td>
+		<td>calle.jamon</td>
+		<td>Previnsion total express</td>
+		<td>22-8765-4321</td>
+		<td>cancer de colon</td>
+            </tr>
+            <tr>
+                <td>Maria Fernanda<br>Gomez Ruiz<br>Paciente 5</td>
+                <td>GORF940320MDFMNS05</td>
+                <td>31</td>
+                <td>M</td>
+                <td>A-</td>
+		<td>20/03/1994</td>
+		<td>656 998 678</td>
+		<td>656 912 365</td>
+		<td>Ricardo<br>Torres Ruiz</td>
+		<td>SOP(sindrome ovario poliquistico)</td>
+		<td>lactosa</td>
+		<td>EILB900611RQ3</td>
+		<td>calle.rosa roja</td>
+		<td>seguros cumbre dorada</td>
+		<td>77-3456-7890</td>
+		<td>Resistencia a la insulina y problemas metabolicos</td>
+            </tr>
+            <tr>
+                <td>Ximena<br>Salazar Bravo<br>Paciente 6</td>
+                <td>SABX020125DFLNX03</td>
+                <td>23</td>
+                <td>M</td>
+		<td>A+</td>
+		<td>25/01/2003</td>
+		<td>656 664 789</td>
+		<td>656 321 0987</td>
+		<td>Gabriel<br>Hernandez Solis</td>
+		<td>rinitis cronica</td>
+		<td>acaros</td>
+		<td>ZUOD820822P16</td>
+		<td>calle.gato</td>
+		<td>Alianza firme seguros</td>
+		<td>81-4567-8901</td>
+		<td></td>
+            </tr>
+            <tr>
+                <td>Lucia<br>Mendez Ortega<br>Paciente 7</td>
+                <td>MEOLO60405MDFRRC01</td>
+                <td>19</td>
+		<td>M</td>
+		<td>B-</td>
+		<td>05/04/2006</td>
+		<td>656 77 891</td>
+		<td>656 235 5656</td>
+		<td>Pablo<br>de la Graza</td>
+		<td></td>
+		<td>picadura de abeja</td>
+		<td>FAVE9907070V4</td>
+		<td>calle.mortadela</td>
+		<td>resguardo familiar pro</td>
+		<td>66-7980-1234</td>
+		<td>hipertension arterial sistemica temprana</td>
+            </tr>
+            <tr>
+                <td>Alejandro<br>Jimenez Castro<br>Paciente 8</td>
+                <td>JICA110228HJCMSL02</td>
+                <td>15</td>
+                <td>H</td>
+		<td>AB+</td>
+		<td>05/04/2011</td>
+		<td>656 477 912</td>
+		<td>656 3456 1098</td>
+		<td>Maria<br>Lopez Sosa</td>
+		<td></td>
+		<td></td>
+		<td>HESG750428DW0</td>
+		<td>calle.naranja</td>
+		<td>circulo de confianza</td>
+		<td>11-5432-1048</td>
+		<td>diabetes mellitus</td>
+            </tr>
+	    <tr>
+                <td>Sofia Elena<br>Hernandez Sanz<br>Paciente 9</td>
+                <td>HESS150815MDFNNA09</td>
+                <td>10</td>
+                <td>M</td>
+		<td>O+</td>
+		<td>15/08/2015</td>
+		<td>656 614 123</td>
+		<td>656 987 6098</td>
+		<td>Juan<br>Perez Garcia</td>
+		<td>dermatitis atopica</td>
+		<td>gluten</td>
+		<td>ISRM8411196Y7</td>
+		<td>calle.queso</td>
+		<td>seguros zenit y salud</td>
+		<td>88 9012 3456</td>
+		<td>dermatitis atopica y rinitis alergica</td>
+            </tr>
+        </tbody>
+    </table>
+    </article>
+
+            <img src="corazon.png" alt="imagen de corazon con simbolo de hospital" class="featured-img" width="170" height="150"style=" display: flex; position: absolute; top: 20px; left: 1000px;">
       </article>
 
     <footer>
@@ -92,6 +294,7 @@ footer {
         <p>No. Control: 24308051280541 | Semestre: 4to | Grupo: I</p>
         <p>Especialidad: Programación</p>
     </footer>
+
 
 </body>
 </html>

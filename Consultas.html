@@ -1,90 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Comic Sans MS, Helvetica, sans-serif;
-}
-
-header {
-  background-color: #ff80aa;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: purple;
-}
-
-nav {
-  float: left;
-  width: 30%;
-  height: 500px;
-  background: #b3daff;
-  padding: 30px;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #ffffcc;
-  height: 500px; 
-}
-
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-footer {
-  background-color: #bb99ff;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
-</head>
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultorio Lily</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #ff80aa;
+            padding: 30px;
+            text-align: center;
+            color: purple;
+            position: relative; 
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 120px; 
+            height: auto;
+        }
+
+      
+        nav {
+            background-color: #b3daff;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;         
+            justify-content: center; 
+            gap: 20px;            
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: purple;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        article {
+            padding: 20px;
+            background-color: #ffffcc;
+            min-height: 100vh;
+        }
+       
+        table {
+            width: 100%; 
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #bb99ff;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-            <img src="consultoriolily.png" alt="Logo del Consultorio Medico" width="250" height="300"style=" display: flex; position: absolute; top: -10px; left: 30px;">
-            <h1>Consultorio Medico Lily</h1>
+        <img src="consultoriolily.png" alt="logo del consultorio uwu">
+        <h1>Consultorio Medico Lily</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#" style="color: purple;">Inicio</a></li>
-            <li><a href="#" style="color: purple;">Pacientes</a></li>
-            <li><a href="#" style="color: purple;">Doctores</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Pacientes.html">Pacientes</a></li>
+            <li><a href="Doctores.html">Doctores</a></li>
         </ul>
     </nav>
 
     <article>
-            <h2 style = "font-size: 35px; color: pink;">Consultas</h2>
-            <!--aki--!>
+        <h2 style="font-size: 35px; color: pink;">Consultas</h2>
+
+        <table>
+            <thead>
+            <tr>
+                 <th>Fecha de visita</th>
+                <th>Hora de visita</th>
+                <th>Consultorio</th>
+                <th>Se realizo la consulta?</th>
+                <th>Motivo de consulta</th>
+		<th>Signos vitales</th>
+		<th>Diagnostico</th>
+		<th>Tratamiento/receta</th>
+		<th>Recomendaciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>18/02/2026</td>
+                <td>08:45</td>
+                <td>3</td>
+                <td>si</td>
+                <td>seguimiento de glucosa</td>
+		<td>pa:130/80,glucosa:155</td>
+		<td>DM tipo 2</td>
+		<td>metformina 850mg</td>
+		<td>dieta baja en carbohidratos</td>
+            </tr>
+            <tr>
+		<td>18/02/2026</td>
+                <td>09:30</td>
+		<td>1</td>
+		<td>no</td>
+		<td>fatiga,frio constante</td>
+		<td>pa:110/70,peso_kg:68</td>
+		<td>hipotiroidismo primario</td>
+		<td>levotiroxina 75mcg(ayuno)</td>
+		<td>perfil tiroideo en 6 semanas</td>
+            </tr>
+	    <tr>
+                <td>18/02/2026</td>
+                <td>18:00</td>
+                <td>3</td>
+                <td>si</td>
+                <td>sibilancias,tos</td>
+		<td>satO2:93,fc:88</td>
+		<td>crisis de asma leve</td>
+		<td>salbutamol</td>
+		<td>evitar alergenos en casa</td>
+            </tr>
+            <tr>
+                <td>18/02/2026</td>
+                <td>11:00</td>
+                <td>2</td>
+		<td>no</td>
+		<td>dolor abdominal,diarrea</td>
+		<td>temp:37.2,fc:80</td>
+		<td>exacerbacion de colitis ulcerosa</td>
+		<td>mesalazina 500mg</td>
+		<td>evitar lacteos,evitar irritantes</td>
+            </tr>
+            <tr>
+                <td>18/02/2026</td>
+                <td>12:00</td>
+                <td>2</td>
+                <td>si</td>
+                <td>irregularidad menstrual</td>
+		<td>pa:115/75,imc:26.5</td>
+		<td>SOP,resistencia ala insulina</td>
+		<td>inositol+anticonceptivos orales</td>
+		<td>ejercicio aerobico 750min/semana</td>
+            </tr>
+            <tr>
+                <td>18/02/2026</td>
+                <td>13:00</td>
+                <td>3</td>
+                <td>si</td>
+                <td>congestion nasal</td>
+		<td>pa:110/70,temp:36.6</td>
+		<td>rinitis cronica alergica</td>
+		<td>loratadina 10mg</td>
+		<td>habitaciones ventiladas,evitar</td>
+            </tr>
+            <tr>
+                <td>18/02/2026</td>
+                <td>14:00</td>
+                <td>2</td>
+		<td>no</td>
+		<td>certificado de salud</td>
+		<td>pa:118/78,fc:65</td>
+		<td>paciente sano</td>
+		<td>multi vitaminico</td>
+		<td>monitoreo preventivo PA</td>
+            </tr>
+            <tr>
+                <td>18/02/2026</td>
+                <td>16:00</td>
+                <td>1</td>
+                <td>no</td>
+                <td>revision de crecimiento</td>
+		<td>peso_kg:52,talla_m:1.62</td>
+		<td>desarrollo puberal normal</td>
+		<td>vitamina D</td>
+		<td>actividad fisica,dieta en calcio</td>
+            </tr>
+	    <tr>
+                <td>18/02/2026</td>
+                <td>17:00</td>
+                <td>3</td>
+                <td>si</td>
+                <td>prurito,lesiones cutaneas</td>
+		<td>temp:36.8</td>
+		<td>dermatitis atopica</td>
+		<td>hidrocortisona crema</td>
+		<td>baños cortos,jabon syndet</td>
+            </tr>
+        </tbody>
+    </table>
+    </article>
+
+          
+
            
-            <img src="descarga.jfif" alt="imagen del consultorio" class="featured-img" widht="300" height="300">
+            <img src="conejo.jpg" alt="imagen del consultas" class="featured-img" width="150" height="170"style=" display: flex; position: absolute; top: 20px; left: 1000px;">
       </article>
 
     <footer>
@@ -92,6 +229,7 @@ footer {
         <p>No. Control: 24308051280541 | Semestre: 4to | Grupo: I</p>
         <p>Especialidad: Programación</p>
     </footer>
+
 
 </body>
 </html>

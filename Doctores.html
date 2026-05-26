@@ -1,90 +1,281 @@
 <!DOCTYPE html>
 <html lang="es">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Comic Sans MS, Helvetica, sans-serif;
-}
-
-header {
-  background-color: #ff80aa;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
-  color: purple;
-}
-
-nav {
-  float: left;
-  width: 30%;
-  height: 500px;
-  background: #b3daff;
-  padding: 30px;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #ffffcc;
-  height: 500px; 
-}
-
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-footer {
-  background-color: #bb99ff;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-}
-</style>
-</head>
-
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consultorio Lily</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', Helvetica, sans-serif;
+        }
+        header {
+            background-color: #ff80aa;
+            padding: 30px;
+            text-align: center;
+            color: purple;
+            position: relative; 
+        }
+
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 30px;
+            width: 120px; 
+            height: auto;
+        }
+
+        nav {
+            background-color: #b3daff;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;         
+            justify-content: center; 
+            gap: 20px;            
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: purple;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        article {
+            padding: 20px;
+            background-color: #ffffcc;
+            min-height: 100vh; 
+        }
+        table {
+            width: 100%; 
+            border-collapse: collapse; 
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 8px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            background-color: #bb99ff;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+    </style>
 </head>
 <body>
 
     <header>
-            <img src="consultoriolily.png" alt="Logo del Consultorio Medico" width="250" height="300"style=" display: flex; position: absolute; top: -10px; left: 30px;">
-            <h1>Consultorio Medico Lily</h1>
+        <img src="consultoriolily.png" alt="logo del consultorio uwu">
+        <h1>Consultorio Medico Lily</h1>
     </header>
 
     <nav>
         <ul>
-            <li><a href="#" style="color: purple;">Inicio</a></li>
-            <li><a href="#" style="color: purple;">Consultas</a></li>
-            <li><a href="#" style="color: purple;">Pacientes</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Consultas.html">Consultas</a></li>
+            <li><a href="Pacientes.html">Pacientes</a></li>
         </ul>
     </nav>
 
     <article>
-            <h2 style = "font-size: 35px; color: pink;">Doctores</h2>
-            <!--aki--!>
+        <h2 style="font-size: 35px; color: pink;">Doctores</h2>
+
+        <table>
+            <thead>
+            <tr>
+               <th>id doctor</th>
+                <th>RFC</th>
+                <th>Nombre completo</th>
+                <th>Cedula profesional</th>
+                <th>CURP</th>
+		<th>Fecha de nacimiento</th>
+		<th>Sexo</th>
+		<th>Telefono personal</th>
+		<th>Tel del consultorio</th>
+		<th>Certificado</th>
+		<th>Correo institucional</th>
+		<th>Especialidad</th>
+		<th>Sub especialidad</th>
+		<th>Disponibilidad</th>
+		<th>Horario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>DOC-001</td>
+                <td>TAVI50210P88</td>
+                <td>Armando Casas Rico</td>
+                <td>7482910</td>
+                <td>CARA750412HDFRRN09</td>
+		<td>12/04/1975</td>
+		<td>H</td>
+		<td>656 1267 9051</td>
+		<td>656 5000 1234</td>
+		<td>CONACER-GER-2026</td>
+		<td>a.casas@clinicamet.mx</td>
+		<td>geriatria</td>
+		<td>cardiologo geriatrica</td>
+		<td>lun-vier</td>
+		<td>08:00-14:00</td>
+            </tr>
+            <tr>
+		<td>DOC-003</td>
+                <td>ACAT21130MK2</td>
+		<td>Octavio Paz Aranda</td>
+		<td>0198673</td>
+		<td>PAA0800115HGRNNN02</td>
+		<td>25/01/1980</td>
+		<td>H</td>
+		<td>656 3232 4655</td>
+		<td>656 5000 1234</td>
+		<td>CNP-NEUM-2026</td>
+		<td>o.paz@clinicamet.mx</td>
+		<td>neumologia</td>
+		<td>alergiologia</td>
+		<td>lun-vier</td>
+		<td>10:00-18:00</td>
+            </tr>
+	    <tr>
+                <td>DOC-004</td>
+                <td>IHA1805149L0</td>
+                <td>Rosa Meza Tellez</td>
+                <td>6172839</td>
+                <td>METR780630MGTNRS01</td>
+		<td>30/06/1981</td>
+		<td>M</td>
+		<td>656 9678 8769</td>
+		<td>656 5000 1234</td>
+		<td>CMG-GASTRO-2024</td>
+		<td>r.meza@clinicamet.mx</td>
+		<td>gastroenterologa</td>
+		<td>endoscopia</td>
+		<td>lun-mier</td>
+		<td>09:00-15:00</td>
+            </tr>
+            <tr>
+                <td>DOC-005</td>
+                <td>RN01001017S4</td>
+                <td>Luz Marina Guerra</td>
+		<td>5564738</td>
+		<td>GUMI850310MDFRRCO5</td>
+		<td>25/08/1990</td>
+		<td>M</td>
+		<td>656 9767 5698</td>
+		<td>656 5000 1234</td>
+		<td>COMEGO-GIN-2025</td>
+		<td>l.marina@clinicamet.mx</td>
+		<td>ginecologia</td>
+		<td>endocrino-ginecologia</td>
+		<td>lun-vier</td>
+		<td>11:00-19:00</td>
+            </tr>
+            <tr>
+                <td>DOC-006</td>
+                <td>TTM050918BY5</td>
+                <td>Jaime Altozano Real</td>
+                <td>4433221</td>
+                <td>ALRJ900825HJCMSL03</td>
+		<td>25/08/1990</td>
+		<td>H</td>
+		<td>656 4567 9749</td>
+		<td>656 5000 1234</td>
+		<td>CONAPEME-PED-2025</td>
+		<td>j.altozano@clinicamet.mx</td>
+		<td>pediatria</td>
+		<td>dermatologia pediatria</td>
+		<td>lun-vier</td>
+		<td>14:00-20:00</td>
+            </tr>
+            <tr>
+                <td>DOC-007</td>
+                <td>SDO220303V11</td>
+                <td>Blanca Nieves Solis</td>
+                <td>9928374</td>
+		<td>TORM800520MDFNNA01</td>
+		<td>20/05/1980</td>
+		<td>M</td>
+		<td>656 9112 2334</td>
+		<td>656 5000 1234</td>
+		<td>CMR-REU-	2026</td>
+		<td>b.solis@clinicamet.mx</td>
+		<td>rehabilitacion deportiva</td>
+		<td>ninguna</td>
+		<td>lun-vier</td>
+		<td>11:00-19:00</td>
+            </tr>
+            <tr>
+                <td>DOC-008</td>
+                <td>CPU9806124D3</td>
+                <td>Aquiles Brinco Lara</td>
+		<td>8837462</td>
+		<td>BRAL920405HGTNS08</td>
+		<td>05/04/1992</td>
+		<td>H</td>
+		<td>656 1212 3434</td>
+		<td>656 5000 1234</td>
+		<td>CONAME-PSI-2026</td>
+		<td>a.brinco@clinicamet.mx</td>
+		<td>nutricion clinica</td>
+		<td>ninguno</td>
+		<td>lun-vier</td>
+		<td>9:00-15:00</td>
+            </tr>
+            <tr>
+                <td>DOC-009</td>
+                <td>FDE031224RE9</td>
+                <td>Mirasol de la Torre</td>
+                <td>7726354</td>
+		<td>NISB881012MDFRRL02</td>
+		<td>12/10/1988</td>
+		<td>M</td>
+		<td>656 9900 1122</td>
+		<td>656 5000 1234</td>
+		<td>CMU-URO-2023</td>
+		<td>m.delatorre@clinicamet.mx</td>
+		<td>urologia</td>
+		<td>ninguno</td>
+		<td>lun-vier</td>
+		<td>12:20-20:00</td>
+            </tr>
+	    <tr>
+                <td>DOC-010</td>
+                <td>ECL110715JH6</td>
+                <td>Sebastian Valdez G.</td>
+                <td>1105942</td>
+		<td>VAGS880415HDFRRN02</td>
+		<td>15/04/1988</td>
+		<td>M</td>
+		<td>656 3468 1289</td>
+		<td>656 5000 1234</td>
+		<td>CUM-URO-2022</td>
+		<td>ninguno</td>
+		<td>nefrologia</td>
+		<td>ninguno</td>
+		<td>lun-vier</td>
+		<td>9:00-15:00</td>
+            </tr>
+        </tbody>
+    </table>
+    </article>
            
-            <img src="conejo.jpg" alt="imagen del consultorio" class="featured-img" widht="300" height="300">
+            <img src="descarga.jfif" alt="imagen del consultorio" class="featured-img" width="150" height="170"style=" display: flex; position: absolute; top: 20px; left: 1300px;">
       </article>
 
     <footer>
@@ -93,5 +284,7 @@ footer {
         <p>Especialidad: Programación</p>
     </footer>
 
+
 </body>
 </html>
+   
